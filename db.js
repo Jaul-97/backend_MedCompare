@@ -12,8 +12,8 @@ const pool = mysql.createPool({
     port: parseInt(process.env.DB_PORT),
     ssl: {
         // Ensure ca.pem is in the root of your Node.js project or provide correct path
-      // ca: fs.readFileSync(path.join(__dirname, 'ca.pem'))
-        ca: fs.readFileSync(path.join(__dirname, '..', 'ca.pem')) // Adjust path if db.js is in a subdirectory
+       ca: fs.readFileSync(path.join(__dirname, 'ca.pem'))
+       // ca: fs.readFileSync(path.join(__dirname, '..', 'ca.pem')) // Adjust path if db.js is in a subdirectory
     },
     waitForConnections: true,
     connectionLimit: 10,
